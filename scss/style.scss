@@ -1,0 +1,84 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&family=Smokum&display=swap');
+@import './reset';
+
+header {
+	width: 100%;
+	border-bottom: 1px solid #ddd;
+	.inner {
+		width: 1180px;
+		height: 150px;
+		margin: 0 auto;
+		position: relative;
+		h1 {
+			position: absolute;
+			top: 20px;
+			left: 10px;
+			a {
+				font: 50px/1 'arial';
+				color: #aaa;
+			}
+		}
+		#gnb {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			border-top: 1px solid #ccc;
+			li {
+				width: 20%;
+				height: 60px;
+				float: left;
+				position: relative;
+				// display: flex;
+				// justify-content: center;
+				// align-items: center;
+				a {
+					display: block;
+					width: 100%;
+					height: 100%;
+					font: bold 14px/60px 'PT Serif';
+					text-align: center;
+					color: #666;
+					// border-right: 1px solid #000;
+				}
+				&::after {
+					content: '';
+					display: block;
+					width: 1px;
+					height: 40%;
+					background-color: #ccc;
+					position: absolute;
+					top: 30%;
+					right: 0;
+				}
+				&:last-of-type::after {
+					display: none;
+				}
+			}
+		}
+		.util {
+			position: absolute;
+			top: 20px;
+			right: 0;
+			// li {
+			// 	float: left;
+			// 	a {
+			// 		display: block;
+			// 		padding: 10px 30px;
+			// 		font: 12px/1 'PT Serif';
+			// 		color: #aaa;
+			// 	}
+			// }
+			li {
+				display: inline-block;
+				a {
+					display: block;
+					padding: 10px 30px;
+					font: 12px/1 'PT Serif';
+					color: #aaa;
+				}
+			}
+		}
+	}
+}
